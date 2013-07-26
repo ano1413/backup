@@ -7,13 +7,12 @@
 # compinit added
 autoload -U compinit
 compinit
-
-autoload -U colors
+autoload -U colors 
 colors
 
 # set bash compatible complete command
-# autoload bashcompinit
-# bashcompinit
+ autoload bashcompinit
+ bashcompinit
 
 setopt NO_BEEP
 setopt histignorealldups sharehistory
@@ -67,6 +66,10 @@ alias xterm='xterm -fa Inconsolata -fn 10x20 -geometry 130x40'
 alias o='xdg-open'
 alias sl='sublime-text'
 
+# Check public IP Address
+alias cmyip="curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
+
+
 extract(){
 if [[ -f $1 ]]; then
     	case $1 in 
@@ -101,20 +104,29 @@ fi
 #}
 
 # Export classpath
-export CLASSPATH=/home/nguyen/jade/lib/jade.jar:/home/nguyen/jade/lib/commons-codec/commons-codec-1.3.jar:/home/nguyen/workspace/RESTfull_ex4/META-INF/persistence.xml:/home/nguyen/weka-3-6-7/weka.jar:/home/nguyen/weka-3-6-7/weka-src.jar:/home/nguyen/jar/libsvm.jar
+export CLASSPATH=/home/nguyen/libs/jars/
 
-PATH="$PATH:/home/nguyen/android-sdk-linux/tools:/home/nguyen/android-sdk-linux/platform-tools"
+PATH="$PATH:/home/nguyen/jython2.7b1/bin:/usr/share/scala/bin:/home/nguyen/play-framework"
+
 
 # PROMPT='%d%>:%{\e[0m}' # default prompt
 # RPROMPT="%{$fg[green]%}[%T on %D{%b. %d, %y}]%{$reset_color%}" # prompt for right side of screen
-PROMPT="%{$fg_bold[magenta]%}-> %{$reset_color%}"
-RPROMPT="%{$fg_bold[magenta]%}[%~]%{$reset_color%}" # prompt for right side of screen
+# 
+# Set Git branch in prompt
+#
+
+ PROMPT="%{$fg_bold[magenta]%}$ %{$reset_color%}"
+ RPROMPT="%{$fg_bold[magenta]%}[%~]%{$reset_color%}" # prompt for right side of screen
 
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # load completion for rvm
-# [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
-fpath=(~/.zsh/Completion $fpath)
+# complete -C rails-complete -o default rails
+# source ~/.rvm/rails.bash
+# fpath=(~/.zsh/Completion $fpath)
+#
+
+
