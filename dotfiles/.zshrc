@@ -88,23 +88,9 @@ else
 fi
 }
 
-#o(){
-#if [[ -f $1 ]]; then
-#	case $1 in
-#		*.pdf) okular $1& ;;
-#		*.avi) vlc $1& ;;
-#		*.wmv) vlc $1& ;;
-#		*.mpg) vlc $1& ;;
-#		*.mov) vlc $1& ;;
-#		*.mkv) vlc $1& ;;
-#	esac
-#else 
-#	echo "'$1' is not a valid file"
-#fi
-#}
 
 # Export classpath
-export CLASSPATH=/home/nguyen/libs/jars/
+export CLASSPATH="/home/nguyen/libs/jars/*:."
 
 PATH="$PATH:/home/nguyen/jython2.7b1/bin:/usr/share/scala/bin:/home/nguyen/play-framework"
 
