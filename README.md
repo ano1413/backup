@@ -1,3 +1,3 @@
 Backup
 ======
-Backup some configuration files
+Backup configuration files 
