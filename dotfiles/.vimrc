@@ -31,6 +31,7 @@ set cursorline
 " set listchars=tab:».,trail:.,extends:#,nbsp:.,eol:$
 
 set listchars=tab:▸\ ,trail:·,extends:#,nbsp:.,eol:↲
+set list!
 
 " Show white space
 " set list listchars=tab:→\ ,trail:·,eol:$
