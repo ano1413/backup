@@ -27,7 +27,7 @@ function prepareForPython {
     pip install scikit-learn
 }
 
-
+# check if having root's right
 if [ "$UID" -ne 0 ]; then
     echo "This script must be run as root" 
 else
