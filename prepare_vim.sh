@@ -11,7 +11,7 @@ fi
 autopairs=~/.vim/bundle/auto-pairs
 vim_snipmate=~/.vim/bundle/vim-snipmate
 ctrlp=~/.vim/bundle/ctrlp
-
+vim_airline=~/.vim/bundle/vim-airline
 
 # Install pathogen.vim 
 if [[ ! -f ~/.vim/autoload/pathogen.vim ]]; then
@@ -34,5 +34,11 @@ fi
 # Install ctrlp
 if [[ ! -d $ctrlp ]]; then
     git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp
+fi
+
+# Install vim-airline instead of powerline, still works though
+
+if [[ ! -d $vim_airline ]]; then
+    git clone https://github.com/bling/vim-airline.git ~/.vim/bundle/vim-airline
 fi
 
