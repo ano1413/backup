@@ -12,6 +12,7 @@ autopairs=~/.vim/bundle/auto-pairs
 vim_snipmate=~/.vim/bundle/vim-snipmate
 ctrlp=~/.vim/bundle/ctrlp
 vim_airline=~/.vim/bundle/vim-airline
+nerdtree=~/.vim/bundle/nerdtree
 
 # Install pathogen.vim 
 if [[ ! -f ~/.vim/autoload/pathogen.vim ]]; then
@@ -42,3 +43,9 @@ if [[ ! -d $vim_airline ]]; then
     git clone https://github.com/bling/vim-airline.git ~/.vim/bundle/vim-airline
 fi
 
+# Install Nerdtree -> very cool navigation for vim
+
+
+if [[ ! -d $nerdtree ]]; then
+    git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+fi
